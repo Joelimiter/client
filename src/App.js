@@ -1,13 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import axios from "axios";
-const API_URL = process.env.REACT_APP_BACKEND_URL
+import FirstComponent from './components/FirstComponent';
+import FirstHook from './components/FirstComponentHook';
 
 function App() {
-
-  const message = axios.get( `${API_URL}test`).then(response => {
-    console.log(response)
-  })
   
   return (
     <div className="App">
@@ -16,6 +12,8 @@ function App() {
         <p>
           Change it and control S <code>src/App.js</code> and save to reload.
         </p>
+        <FirstComponent netisbutt={"The Best"}/>
+        <FirstHook netisbutt={"The very Best"}/>
         <a
           className="App-link"
           href="https://reactjs.org"
